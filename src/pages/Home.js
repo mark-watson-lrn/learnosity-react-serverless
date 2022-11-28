@@ -17,7 +17,7 @@ const Home = () => {
 
       const callBackendAPI = async () => {
 
-        const response = await fetch('/.netlify/functions/welcome');
+        const response = await fetch('https://main--learnosity-serverless.netlify/.netlify/functions-serve/welcome');
         const body = await response.json();
         console.log(body)
 
