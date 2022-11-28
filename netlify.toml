@@ -7,3 +7,7 @@ port = 8989
 command = "npm run build"
 functions = "netlify/functions"
 publish = "build"
+[[redirects]]
+from = "/*"
+to = "/"
+status = 200
