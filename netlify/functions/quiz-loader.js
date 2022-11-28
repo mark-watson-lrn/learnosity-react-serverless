@@ -37,10 +37,10 @@ exports.handler = async function() {
             keys for your own account.
         */
         {
-            consumer_key: process.env.CONSUMER_KEY,
+            consumer_key: 'yis0TYCu7U9V4o7M',
             domain: domain
         },
-        process.env.CONSUMER_SECRET,
+        '74c5fd430cf1242a527f6223aebd42d30464be22',
         {
             // Unique student identifier, a UUID generated on line 9.
             user_id: user_id,

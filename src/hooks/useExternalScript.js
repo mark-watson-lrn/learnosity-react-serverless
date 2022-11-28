@@ -43,7 +43,7 @@ export const useExternalScript = (url, authentication) => {
             script.removeEventListener("error", handleScript);
         };
 
-    }, [state]);
+    },[state, url, authentication]);
 
     return state;
 };
