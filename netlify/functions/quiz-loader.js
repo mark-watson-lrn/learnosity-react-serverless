@@ -10,12 +10,13 @@ exports.handler = async function() {
     const user_id = uuid.v4();
     const session_id = uuid.v4();
 
-    let domain = 'localhost';
+    // let domain = 'localhost';
+    let domain = 'learnosity-serverless.netlify.app';
 
     // switch for Domain if prod is hosted on a different domain.
-    if (process.env.NODE_ENV === 'production') {
-        domain = production_domain.name;
-    }
+    // if (process.env.NODE_ENV === 'production') {
+    //     domain = production_domain.name;
+    // }
 
     //console.log(production_domain.prodDomain());
 
