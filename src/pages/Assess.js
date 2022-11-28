@@ -12,13 +12,13 @@ const Assess = () => {
     if(!itemAPI){
 
       const callLearnosityAPI = async () => {
-        const response = await fetch('/quiz-loader');
-        const body = await response.json();
-
-        if (response.status !== 200) {
+        const response = await fetch('/.netlify/functions/quiz-loader')
+            .then(response => response.json());
+        const body = response;
+        if (!response) {
           throw Error(body.message)
         }
-        setItemAPI(JSON.stringify(body));
+        setItemAPI(body);
       }
 
       callLearnosityAPI()
@@ -27,13 +27,13 @@ const Assess = () => {
 
   }, [itemAPI]);
 
-  let authenticated = '';
+  let authenticated = {};
 
   if (itemAPI) {
-    authenticated = JSON.parse(itemAPI);
+    authenticated = itemAPI;
   }
 
-  const learnosityScript = '//items.learnosity.com/?v2022.1.LTS';
+  const learnosityScript = 'https://items.learnosity.com/?v2022.1.LTS';
   const status = useExternalScript(learnosityScript, authenticated.request);
 
   return (

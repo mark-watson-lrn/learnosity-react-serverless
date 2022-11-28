@@ -17,8 +17,9 @@ const Home = () => {
 
       const callBackendAPI = async () => {
 
-        const response = await fetch('/welcome');
+        const response = await fetch('/.netlify/functions/welcome');
         const body = await response.json();
+        console.log(body)
 
         if (response.status !== 200) {
 
@@ -39,32 +40,32 @@ const Home = () => {
   return (
     <>
       {loading ? (
-        <div> ....Loading </div>
+        <div> ...Loading </div>
       ) : (
         <div className="app">
           <header className="app-header">
-            <a 
-              className="app-link" 
-              href="/assess" 
-              rel="noopener noreferrer"
-            >
+            {/*<a*/}
+            {/*  className="app-link"*/}
+            {/*  href="/assess"*/}
+            {/*  rel="noopener noreferrer"*/}
+            {/*>*/}
               <img src={logo} className="app-logo" alt="learnosity logo" />
-            </a>
-            <a
-              className="app-link"
-              href="https://learnosity.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            {/*</a>*/}
+            {/*<a*/}
+            {/*  className="app-link"*/}
+            {/*  href="https://learnosity.com"*/}
+            {/*  target="_blank"*/}
+            {/*  rel="noopener noreferrer"*/}
+            {/*>*/}
               <img src={learnosity} className="app-name" alt="learnosity" />
-            </a>
-            <div className="react-logo-container">using 
+            {/*</a>*/}
+            <div className="react-logo-container">using
               <img src={react_logo} className="react-logo" alt="react logo" />
             </div>
           </header>
-          <a 
-            className="app-link" 
-            href="/assess" 
+          <a
+            className="app-link"
+            href="/assess"
             rel="noopener noreferrer"
           >
             <div className="message-container">

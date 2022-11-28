@@ -3,12 +3,11 @@ import React from 'react';
 
 export const QuizListener = (authentication) => {
 
-    let learnosityObj = '';
+    let learnosityObj = {};
 
     if (authentication) {
 
-        if (typeof LearnosityItems != 'undefined') {
-
+        if (typeof LearnosityItems !== 'undefined') {
             learnosityObj = LearnosityItems.init(authentication, {
                 readyListener() {
                     console.log('👍🏼 <<< Learnosity Items API is ready >>> 🧘🏼');
@@ -19,7 +18,7 @@ export const QuizListener = (authentication) => {
             })
         }
 
-        if (typeof LearnosityReports != 'undefined') {
+        if (typeof LearnosityReports !== 'undefined') {
 
             learnosityObj = LearnosityReports.init(authentication, {
                 readyListener() {
@@ -30,7 +29,6 @@ export const QuizListener = (authentication) => {
                 }
             })
         }
-
     }
 
     return (

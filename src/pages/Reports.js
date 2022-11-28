@@ -11,7 +11,7 @@ const Reports = () => {
     useEffect(() => {
 
         const callLearnosityAPI = async () => {
-            const response = await fetch('/reports-loader');
+            const response = await fetch('/.netlify/functions/reports-loader');
             const body = await response.json();
 
             if (response.status !== 200) {
@@ -27,7 +27,7 @@ const Reports = () => {
 
     const navigate = useNavigate();
 
-    let authenticated = '';
+    let authenticated = {};
 
     if (reportAPI) {
         authenticated = JSON.parse(reportAPI);
@@ -38,8 +38,8 @@ const Reports = () => {
 
     return (
         <>
-            <div className='results-container'>            
-                <h1 className='results-header'>🏆 Your Results 🏆</h1>            
+            <div className='results-container'>
+                <h1 className='results-header'>🏆 Your Results 🏆</h1>
                 {status === 'loading' && <p> loading... </p>}
                 {status === 'ready' && <ReportsWithScriptLoaded />}
                 <button className="btn-try-again" onClick={ () => navigate('/', {replace: true})}> Try Again ? </button>

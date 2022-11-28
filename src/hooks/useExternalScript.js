@@ -29,21 +29,21 @@ export const useExternalScript = (url, authentication) => {
             script.addEventListener("load", handleScript);
             script.addEventListener("error", handleScript);
 
-            const myListener = async () => { 
-                let quiz = QuizListener(authentication);
+        const myListener = async () => {
+            let quiz = await QuizListener(authentication);
 
-                let result = await quiz;
-                return (result);
-            }
+            return (quiz);
+        }
 
-            myListener();
+        myListener();
 
-        return () => {
+        return () =>
+        {
             script.removeEventListener("load", handleScript);
             script.removeEventListener("error", handleScript);
         };
 
-    }, [url, authentication]);
+    }, [state]);
 
     return state;
 };
