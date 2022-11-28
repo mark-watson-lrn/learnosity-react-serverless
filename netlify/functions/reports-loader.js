@@ -5,13 +5,15 @@ exports.handler = async function(event) {
 
     // - - - - - - Learnosity's server-side configuration - - - - - - //
 
-    let domain = 'localhost';
+    // let domain = 'localhost';
+    let domain = 'main--learnosity-serverless.netlify.app';
+
     let assessUserRefererString = event.headers.referer;
     let userString = assessUserRefererString.substring(assessUserRefererString.indexOf('=') + 1);
 
-    // switch for Domain if prod is hosted on a different domain.
-    if (process.env.NODE_ENV === 'production') {
-        domain = production_domain.name;
+    // // switch for Domain if prod is hosted on a different domain.
+    // if (process.env.NODE_ENV === 'production') {
+    //     domain = production_domain.name;
     }
 
     const learnositySdk = new Learnosity();
