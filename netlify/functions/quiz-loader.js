@@ -15,7 +15,7 @@ exports.handler = async function() {
     // switch for Domain if prod is hosted on a different domain.
     if (process.env.NODE_ENV === 'production') {
         domain = production_domain.name;
-    };
+    }
 
     //console.log(production_domain.prodDomain());
 

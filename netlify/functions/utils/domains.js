@@ -1,5 +1,5 @@
 
 module.exports = {
         domain: 'netlify',
-        name: 'learnosity-serverless.netlify.app'
+        name: 'main--learnosity-serverless.netlify.app'
     }
