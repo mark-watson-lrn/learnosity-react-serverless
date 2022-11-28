@@ -1,5 +1,5 @@
 const Learnosity = require('learnosity-sdk-nodejs/index'); // Include Learnosity SDK constructor
-const production_domain = require('./utils/domains');
+// const production_domain = require('./utils/domains');
 
 exports.handler = async function(event) {
 
@@ -14,7 +14,7 @@ exports.handler = async function(event) {
     // // switch for Domain if prod is hosted on a different domain.
     // if (process.env.NODE_ENV === 'production') {
     //     domain = production_domain.name;
-    }
+    // }
 
     const learnositySdk = new Learnosity();
 

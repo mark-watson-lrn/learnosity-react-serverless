@@ -1,6 +1,6 @@
 const Learnosity = require('learnosity-sdk-nodejs/index'); // Include Learnosity SDK constructor
 const uuid = require('uuid'); // Load the UUID library
-const production_domain = require('./utils/domains');
+// const production_domain = require('./utils/domains');
 
 exports.handler = async function() {
 
@@ -11,7 +11,7 @@ exports.handler = async function() {
     const session_id = uuid.v4();
 
     // let domain = 'localhost';
-    let domain = 'learnosity-serverless.netlify.app';
+    let domain = 'main--learnosity-serverless.netlify.app';
 
     // switch for Domain if prod is hosted on a different domain.
     // if (process.env.NODE_ENV === 'production') {
