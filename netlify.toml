@@ -9,5 +9,5 @@ functions = "netlify/functions"
 publish = "build"
 [[redirects]]
 from = "/*"
-to = "/"
+to = "/.netlify/functions/"
 status = 200
