@@ -7,12 +7,9 @@ exports.handler = async function(event) {
     let assessUserRefererString = event.headers.referer;
     let userString = assessUserRefererString.substring(assessUserRefererString.indexOf('=') + 1);
 
-    let domain =  'localhost';
-
-    // switch for Domain if prod is hosted on a different domain.
-    if (process.env.NODE_ENV === 'production') {
-        domain = 'main--learnosity-serverless.netlify.app';
-    }
+    // const domain =  'localhost';
+    // const domain =  'main--learnosity-serverless.netlify.app';
+    const domain = process.env.DOMAIN;
 
     const learnositySdk = new Learnosity();
 

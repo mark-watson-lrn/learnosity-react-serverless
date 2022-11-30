@@ -10,17 +10,9 @@ exports.handler = async function() {
     const user_id = uuid.v4();
     const session_id = uuid.v4();
 
-    let domain =  'localhost';
-
-    // switch for Domain if prod is hosted on a different domain.
-    if (process.env.NODE_ENV === 'development') {
-        domain = 'main--learnosity-serverless.netlify.app';
-    }
-
-    // switch for Domain if prod is hosted on a different domain.
-    // if (process.env.NODE_ENV === 'production') {
-    //     domain = production_domain.name;
-    // }
+    // const domain =  'localhost';
+    // const domain =  'main--learnosity-serverless.netlify.app';
+    const domain = process.env.DOMAIN;
 
     // variable created to route from assessment api to reports api
     // - triggered when user closes test.
