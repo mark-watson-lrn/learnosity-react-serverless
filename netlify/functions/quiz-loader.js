@@ -13,7 +13,7 @@ exports.handler = async function() {
     let domain =  'localhost';
 
     // switch for Domain if prod is hosted on a different domain.
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === 'development') {
         domain = 'main--learnosity-serverless.netlify.app';
     }
 
