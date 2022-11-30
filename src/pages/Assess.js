@@ -9,8 +9,6 @@ const Assess = () => {
 
   useEffect(() => {
 
-    console.log('location = ',location.hostname);
-
     if(!itemAPI){
 
       const callLearnosityAPI = async () => {
