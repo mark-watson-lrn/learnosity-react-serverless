@@ -8,8 +8,8 @@ exports.handler = async function(event) {
     let userString = assessUserRefererString.substring(assessUserRefererString.indexOf('=') + 1);
 
     // const domain =  'localhost';
-    // const domain =  'main--learnosity-serverless.netlify.app';
-    const domain = process.env.DOMAIN;
+     const domain =  'main--learnosity-serverless.netlify.app';
+    //const domain = process.env.DOMAIN;
 
     const learnositySdk = new Learnosity();
 
