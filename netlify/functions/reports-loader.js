@@ -34,7 +34,7 @@ exports.handler = async function(event) {
                     activities: [
                         {
                             id: 'react_sdk_primer_activity',
-                            name: 'your result',
+                            name: 'Your Result',
                         },
                     ],
                 },
