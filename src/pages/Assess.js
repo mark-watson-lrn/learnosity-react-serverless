@@ -14,7 +14,7 @@ const Assess = () => {
     if(!itemAPI){
 
       const callLearnosityAPI = async () => {
-        const response = await fetch('.netlify/functions/quiz-loader')
+        const response = await fetch('../.netlify/functions/quiz-loader')
             .then(response => response.json());
         const body = response;
         if (!response) {
