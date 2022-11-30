@@ -14,7 +14,7 @@ exports.handler = async function() {
 
     // switch for Domain if prod is hosted on a different domain.
     if (process.env.NODE_ENV === 'production') {
-        domain = process.env.DOMAIN;
+        domain = 'main--learnosity-serverless.netlify.app';
     }
 
     // switch for Domain if prod is hosted on a different domain.

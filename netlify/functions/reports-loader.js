@@ -11,7 +11,7 @@ exports.handler = async function(event) {
 
     // switch for Domain if prod is hosted on a different domain.
     if (process.env.NODE_ENV === 'production') {
-        domain = process.env.DOMAIN;
+        domain = 'main--learnosity-serverless.netlify.app';
     }
 
     const learnositySdk = new Learnosity();
