@@ -134,4 +134,9 @@
     font-size: small;
     transform: translateY(65%);
   }
+
+    .results-container {
+        width: 40vw;
+        margin: auto;
+    }
 }
