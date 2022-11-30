@@ -11,7 +11,7 @@ exports.handler = async function() {
     const session_id = uuid.v4();
 
     // const domain =  'localhost';
-     const domain =  'main--learnosity-serverless.netlify.app';
+    const domain =  'learnosity-serverless.netlify.app';
     // const domain = process.env.DOMAIN;
 
     // variable created to route from assessment api to reports api
