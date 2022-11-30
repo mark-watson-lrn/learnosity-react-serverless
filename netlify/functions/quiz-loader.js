@@ -10,8 +10,7 @@ exports.handler = async function() {
     const user_id = uuid.v4();
     const session_id = uuid.v4();
 
-    // let domain = 'localhost';
-    let domain = 'main--learnosity-serverless.netlify.app';
+    let domain = process.env.DOMAIN;
 
     // switch for Domain if prod is hosted on a different domain.
     // if (process.env.NODE_ENV === 'production') {
@@ -79,9 +78,6 @@ exports.handler = async function() {
                 }
             }
         });
-
-    console.log('request = ', request);
-    console.log('process.env = ', process.env.NODE_ENV);
 
     return {
         statusCode: 200,

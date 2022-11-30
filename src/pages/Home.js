@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react'
-import logo from '../assets/images/logo.svg'
-import learnosity from '../assets/images/learnosity.svg'
-import react_logo from '../assets/images/reactjs.svg'
+import { useState, useEffect } from 'react';
+import logo from '../assets/images/logo.svg';
+import learnosity from '../assets/images/learnosity.svg';
+import react_logo from '../assets/images/reactjs.svg';
+import lambda_logo from '../assets/images/aws-lambda-1.svg';
 import '../style/App.css'
 
 const Home = () => {
@@ -43,23 +44,25 @@ const Home = () => {
       ) : (
         <div className="app">
           <header className="app-header">
-            {/*<a*/}
-            {/*  className="app-link"*/}
-            {/*  href="/assess"*/}
-            {/*  rel="noopener noreferrer"*/}
-            {/*>*/}
+            <a
+              className="app-link"
+              href="/assess"
+              rel="noopener noreferrer"
+            >
               <img src={logo} className="app-logo" alt="learnosity logo" />
-            {/*</a>*/}
-            {/*<a*/}
-            {/*  className="app-link"*/}
-            {/*  href="https://learnosity.com"*/}
-            {/*  target="_blank"*/}
-            {/*  rel="noopener noreferrer"*/}
-            {/*>*/}
+            </a>
+            <a
+              className="app-link"
+              href="https://learnosity.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={learnosity} className="app-name" alt="learnosity" />
-            {/*</a>*/}
+            </a>
             <div className="react-logo-container">using
               <img src={react_logo} className="react-logo" alt="react logo" />
+              and
+              <img src={lambda_logo} className="lambda-logo" alt="lambda logo" />
             </div>
           </header>
           <a
