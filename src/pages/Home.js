@@ -59,10 +59,13 @@ const Home = () => {
             >
               <img src={learnosity} className="app-name" alt="learnosity" />
             </a>
-            <div className="react-logo-container">using
+
+            <div className="react-logo-container">
+              <p>using</p>
               <img src={react_logo} className="react-logo" alt="react logo" />
-              and
+              <p>and</p>
               <img src={lambda_logo} className="lambda-logo" alt="lambda logo" />
+              <span className={"lambda-header-text"}>Lambda</span>
             </div>
           </header>
           <a

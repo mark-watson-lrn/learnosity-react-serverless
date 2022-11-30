@@ -8,7 +8,7 @@
 
 .message-container {
   position: absolute;
-  bottom: 3rem;
+  bottom: 5rem;
   left: 15%;
   width: 70vw;
   height: 3rem;
@@ -26,7 +26,7 @@
         filter: hue-rotate(0deg);
     }
     100% {
-        filter: hue-rorate(360deg);
+        filter: hue-rotate(360deg);
     }
 }
 
@@ -50,39 +50,47 @@
 }
 
 .app-header {
-  background-color: #282c34;
-  height: 95vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .app-link:link {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .app-link:hover{
-  cursor: pointer;
+    cursor: pointer;
 }
 
-.react-logo-container{
-  position:absolute;
-  transform: translateX(40%) translateY(90%);
+.react-logo-container {
+    display: flex;
+    position:absolute;
+    transform: translateX(40%) translateY(60%);
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.react-logo{
-  transform: translateY(30%);
+.react-logo {
+  transform: translateY(0%);
 }
 
-.results-container{
-    width: 80vw;
+.lambda-header-text {
+    color: #fa7e14;
+}
+
+.results-container {
+    width: 70vw;
     margin: auto;
 }
 
-.btn-try-again{
+.btn-try-again {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     position: absolute;
@@ -96,7 +104,7 @@
     cursor: pointer;
 }
 
-.btn-try-again:hover{
+.btn-try-again:hover {
     background-color: #0e4161;
 }
 
@@ -119,7 +127,7 @@
   .message-container{
       left: 8%;
       width: 80vw;
-      bottom: 4rem;
+      bottom: 6rem;
   }
 
   .the-message {
