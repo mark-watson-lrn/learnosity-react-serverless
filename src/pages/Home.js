@@ -19,7 +19,6 @@ const Home = () => {
 
         const response = await fetch('.netlify/functions/welcome');
         const body = await response.json();
-        console.log(body)
 
         if (response.status !== 200) {
 
