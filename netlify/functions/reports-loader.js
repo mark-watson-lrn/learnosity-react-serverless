@@ -33,8 +33,8 @@ exports.handler = async function(event) {
                     users: [{ id: userString, name: 'Learnosity_1' }],
                     activities: [
                         {
-                            id: 'react_sdk_primer_activity',
-                            name: 'react_sdk_primer_activity',
+                            id: 'user result',
+                            name: 'your result',
                         },
                     ],
                 },

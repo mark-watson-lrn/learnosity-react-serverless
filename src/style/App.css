@@ -86,7 +86,6 @@
 }
 
 .results-container {
-    width: 70vw;
     margin: auto;
 }
 
@@ -124,19 +123,20 @@
 }
 
 @media only screen and (max-width: 481px) {
-  .message-container{
-      left: 8%;
-      width: 80vw;
-      bottom: 6rem;
+    .message-container{
+        left: 8%;
+        width: 80vw;
+        bottom: 6rem;
   }
 
-  .the-message {
-    font-size: small;
-    transform: translateY(65%);
+    .the-message {
+        font-size: small;
+        transform: translateY(65%);
   }
 
     .results-container {
-        width: 40vw;
-        margin: auto;
+        margin: 1rem;
+        max-width: 95vw;
     }
+
 }
