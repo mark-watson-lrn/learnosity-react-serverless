@@ -4,15 +4,15 @@ const Learnosity = require('learnosity-sdk-nodejs/index'); // Include Learnosity
 exports.handler = async function(event) {
 
     // - - - - - - Learnosity's server-side configuration - - - - - - //
-    let domain = process.env.DOMAIN;
-
     let assessUserRefererString = event.headers.referer;
     let userString = assessUserRefererString.substring(assessUserRefererString.indexOf('=') + 1);
 
-    // // switch for Domain if prod is hosted on a different domain.
-    // if (process.env.NODE_ENV === 'production') {
-    //     domain = production_domain.name;
-    // }
+    let domain =  'localhost';
+
+    // switch for Domain if prod is hosted on a different domain.
+    if (process.env.NODE_ENV === 'production') {
+        domain = process.env.DOMAIN;
+    }
 
     const learnositySdk = new Learnosity();
 

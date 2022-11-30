@@ -10,7 +10,12 @@ exports.handler = async function() {
     const user_id = uuid.v4();
     const session_id = uuid.v4();
 
-    let domain = process.env.DOMAIN;
+    let domain =  'localhost';
+
+    // switch for Domain if prod is hosted on a different domain.
+    if (process.env.NODE_ENV === 'production') {
+        domain = process.env.DOMAIN;
+    }
 
     // switch for Domain if prod is hosted on a different domain.
     // if (process.env.NODE_ENV === 'production') {
