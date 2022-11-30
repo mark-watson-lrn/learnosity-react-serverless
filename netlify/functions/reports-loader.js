@@ -6,7 +6,7 @@ exports.handler = async function(event) {
     // - - - - - - Learnosity's server-side configuration - - - - - - //
 
     // let domain = 'localhost';
-    let domain = '*.netlify.app';
+    let domain = 'main--learnosity-serverless.netlify.app/.netlify/functions/quiz-loader';
 
     let assessUserRefererString = event.headers.referer;
     let userString = assessUserRefererString.substring(assessUserRefererString.indexOf('=') + 1);
