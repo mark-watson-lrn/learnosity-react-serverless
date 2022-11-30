@@ -10,8 +10,8 @@ exports.handler = async function() {
     const user_id = uuid.v4();
     const session_id = uuid.v4();
 
-    // let domain = 'localhost';
-    let domain = 'main--learnosity-serverless.netlify.app';
+    let domain = 'localhost';
+    //let domain = 'main--learnosity-serverless.netlify.app';
 
     // switch for Domain if prod is hosted on a different domain.
     // if (process.env.NODE_ENV === 'production') {
@@ -36,10 +36,10 @@ exports.handler = async function() {
             keys for your own account.
         */
         {
-            consumer_key: 'yis0TYCu7U9V4o7M',
+            consumer_key: process.env.CONSUMER_KEY,
             domain: domain
         },
-        '74c5fd430cf1242a527f6223aebd42d30464be22',
+        process.env.CONSUMER_SECRET,
         {
             // Unique student identifier, a UUID generated on line 9.
             user_id: user_id,
@@ -81,6 +81,7 @@ exports.handler = async function() {
         });
 
     console.log('request = ', request);
+    console.log('process.env = ', process.env.NODE_ENV);
 
     return {
         statusCode: 200,

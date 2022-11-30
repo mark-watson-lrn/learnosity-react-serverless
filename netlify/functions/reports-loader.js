@@ -5,8 +5,8 @@ exports.handler = async function(event) {
 
     // - - - - - - Learnosity's server-side configuration - - - - - - //
 
-    // let domain = 'localhost';
-    let domain = 'main--learnosity-serverless.netlify.app';
+    let domain = 'localhost';
+    // let domain = 'main--learnosity-serverless.netlify.app';
 
     let assessUserRefererString = event.headers.referer;
     let userString = assessUserRefererString.substring(assessUserRefererString.indexOf('=') + 1);
@@ -22,10 +22,10 @@ exports.handler = async function(event) {
 
         'reports',  // selects Reports API
         {
-            consumer_key: "yis0TYCu7U9V4o7M",
+            consumer_key: process.env.CONSUMER_KEY,
             domain: domain,
         },
-        "74c5fd430cf1242a527f6223aebd42d30464be22",
+        process.env.CONSUMER_SECRET,
 
         {
             reports: [
