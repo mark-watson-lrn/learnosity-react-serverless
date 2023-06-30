@@ -33,7 +33,7 @@ const Reports = () => {
         authenticated = JSON.parse(reportAPI);
     }
 
-    const learnosityScript = '//reports.learnosity.com/?v2022.1.LTS';
+    const learnosityScript = '//reports.learnosity.com/?v2022.3.LTS';
     const status = useExternalScript(learnosityScript, authenticated.request);
 
     return (
