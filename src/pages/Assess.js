@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useExternalScript } from '../hooks/useExternalScript';
 import { AssessWithScriptLoaded } from '../components/AssessWithScriptLoaded';
-import LoadSpinner from '../components/LoadRetrySpinner';
-import Delayed from '../components/Delayed';
 import '../style/App.css';
 
 const Assess = () => {
@@ -35,13 +33,13 @@ const Assess = () => {
     authenticated = itemAPI;
   }
 
-  const learnosityScript = 'https://items.learnosity.com/?v2022.3.LTS';
+  const learnosityScript = 'https://items.learnosity.com/?v2022.1.LTS';
   const status = useExternalScript(learnosityScript, authenticated.request);
 
   return (
     <>
       <div>
-        {status === 'loading' && <LoadSpinner />}
+        {status === 'loading' && <p> loading... </p>}
         {status === 'ready' && <AssessWithScriptLoaded />}
       </div>
     </>

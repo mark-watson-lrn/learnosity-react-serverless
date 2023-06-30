@@ -107,31 +107,6 @@
     background-color: #0e4161;
 }
 
-.lrn_spinner {
-    display: flex;
-    margin: 50% auto;
-    width: 200px;
-    text-align: center;
-}
-.lrn_spinner > [class^="lrn_bounce"] {
-    width: 4rem;
-    height: 4rem;
-    margin-right: 1px;
-    background-color: darkgrey;
-    border-radius: 100%;
-    display: inline-block;
-    animation: bouncedelay 1.4s infinite ease-in-out;
-    animation-fill-mode: both;
-}
-.lrn_spinner .lrn_bounce1 {
-    animation-delay: -0.32s;
-}
-
-.lrn_spinner .lrn_bounce2 {
-    animation-delay: -0.16s;
-}
-
-
 @media (prefers-reduced-motion: no-preference) {
   .app-logo {
     animation: app-logo-spin infinite 15s linear alternate;
